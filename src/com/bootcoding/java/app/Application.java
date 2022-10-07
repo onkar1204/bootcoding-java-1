@@ -1,6 +1,8 @@
 package com.bootcoding.java.app;
 
 import com.bootcoding.java.model.Customer;
+import com.bootcoding.java.model.Order;
+import com.bootcoding.java.service.OrderService;
 
 public class Application {
     public static void main(String[] args) {
@@ -22,5 +24,8 @@ public class Application {
         pratik.setState("MP");
         pratik.setDileveryAddress("abc");
         pratik.print();
+
+        OrderService orderService = new OrderService();
+        orderService.createOrder();
     }
 }
