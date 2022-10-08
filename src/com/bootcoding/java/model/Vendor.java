@@ -3,13 +3,20 @@ package com.bootcoding.java.model;
 import java.util.Date;
 
 public class Vendor {
-    private Long id;
+    private long id;
+    private String name;
+    private String state;
+    private String city;
+    private boolean approved;
+    private double latitude;
+    private Date registrationDate;
+    private Date modifiedDate;
 
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -69,12 +76,10 @@ public class Vendor {
         this.modifiedDate = modifiedDate;
     }
 
-    private String name;
-            private String state;
-            private String city;
-            private boolean approved;
-            private double latitude;
-            private Date registrationDate;
-            private Date modifiedDate;
-
+    public void print() {
+        System.out.println(getId());
+        System.out.println(getState());
+        System.out.println(getName());
+        System.out.println(getRegistrationDate());
+    }
 }

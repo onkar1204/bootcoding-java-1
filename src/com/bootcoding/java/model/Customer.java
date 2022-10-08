@@ -3,18 +3,21 @@ package com.bootcoding.java.model;
 import java.util.Date;
 
 public class Customer {
-    private Long id;
+    private long id;
     private String name;
     private String emailId;
     private String password;
     private String city;
     private String state;
+    private String deliveryAddress;
+    private Date createdAt;
+    private Date modifiedAt;
 
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -58,14 +61,6 @@ public class Customer {
         this.state = state;
     }
 
-    public String getDileveryAddress() {
-        return dileveryAddress;
-    }
-
-    public void setDileveryAddress(String dileveryAddress) {
-        this.dileveryAddress = dileveryAddress;
-    }
-
     public Date getCreatedAt() {
         return createdAt;
     }
@@ -82,13 +77,18 @@ public class Customer {
         this.modifiedAt = modifiedAt;
     }
 
-    private String dileveryAddress;
-    private Date createdAt;
-    private Date modifiedAt;
-    public void print(){
+    public String getDeliveryAddress() {
+        return deliveryAddress;
+    }
+
+    public void setDeliveryAddress(String deliveryAddress) {
+        this.deliveryAddress = deliveryAddress;
+    }
+
+    public void print() {
         System.out.println(getName());
         System.out.println(getCity());
         System.out.println(getState());
-        System.out.println(getDileveryAddress());
+        System.out.println(getDeliveryAddress());
     }
 }

@@ -3,10 +3,14 @@ package com.bootcoding.java.model;
 import java.util.List;
 
 public class Order {
+    private long id;
     long CustomerId;
     long VendorId;
     double totalPrice;
     String deliveryAddress;
+
+    OrderStatus status;
+    List <MenuItem> manuItems;
 
     public long getCustomerId() {
         return CustomerId;
@@ -55,9 +59,6 @@ public class Order {
     public void setManuItems(List<MenuItem> manuItems) {
         this.manuItems = manuItems;
     }
-
-    OrderStatus status;
-    List <MenuItem> manuItems;
     public void print(){
         System.out.println(getCustomerId());
         System.out.println(getStatus());
